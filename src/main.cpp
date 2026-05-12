@@ -70,6 +70,10 @@ const int JOYSTICK_DEADZONE = 2;
 int targetESC = ESC_NEUTRAL;
 int currentESC = ESC_NEUTRAL;
 
+int reverseState = 0;          // 0: Đang tiến/Đứng im, 1: Bóp phanh, 2: Nhả về N, 3: Đang lùi
+unsigned long reverseTimer = 0;
+unsigned long lastYZeroTime = 0;
+
 int targetSteer = SERVO_CENTER;
 int currentSteer = SERVO_CENTER;
 
@@ -138,7 +142,7 @@ void setup() {
     Serial.println("=================================");
     Serial.println("PuTi Delivery Robot Ready");
     Serial.println("Joystick Control Mode");
-    Serial.println("Triangle = 25%");
+    Serial.println("Triangle = 35%");
     Serial.println("Square   = 50%");
     Serial.println("Circle   = 75%");
     Serial.println("Select   = 100%");
@@ -163,7 +167,7 @@ void loop() {
     // ==================================================
 
     if(GamePad.isTrianglePressed()) {
-        speedScale = 0.25;
+        speedScale = 0.35;
     }
 
     if(GamePad.isSquarePressed()) {
@@ -236,77 +240,65 @@ void loop() {
     );
 
     // ==================================================
-    // THROTTLE CONTROL WITH DIAGONAL COMPENSATION
-    //
-    // Vấn đề cũ:
-    // Khi kéo joystick lên rồi nghiêng trái/phải,
-    // giá trị Y có thể giảm về gần 0 nên xe mất tiến.
-    //
-    // Cách sửa:
-    // Nếu joystick vẫn đang ở vùng tiến/lùi,
-    // dùng max(abs(Y), abs(X)) làm độ lớn ga.
-    //
-    // Kết quả:
-    // Lên + trái  = tiến và rẽ trái
-    // Lên + phải  = tiến và rẽ phải
-    // Ngang trái/phải = chỉ rẽ, không tiến
-    // Xuống + trái/phải = lùi và rẽ
+    // THROTTLE CONTROL VÀ LOGIC CHỐNG KẸT PHANH (NHẤP NHẢ KHÔNG DELAY)
     // ==================================================
 
     targetESC = ESC_NEUTRAL;
 
     if(y > 0) {
-
-        int throttleInput = max(
-            y,
-            abs(x)
-        );
-
-        throttleInput = constrain(
-            throttleInput,
-            0,
-            JOYSTICK_MAX
-        );
-
-        int maxForwardDelta =
-            (ESC_FORWARD_MAX - ESC_NEUTRAL) * speedScale;
-
-        int delta = map(
-            throttleInput,
-            0,
-            JOYSTICK_MAX,
-            0,
-            maxForwardDelta
-        );
-
+        reverseState = 0; // Đang tiến thì reset chu trình lùi
+        
+        int throttleInput = y; 
+        
+        int maxForwardDelta = (ESC_FORWARD_MAX - ESC_NEUTRAL) * speedScale;
+        int delta = map(throttleInput, 0, JOYSTICK_MAX, 0, maxForwardDelta);
+        
         targetESC = ESC_NEUTRAL + delta;
     }
 
     else if(y < 0) {
+        int throttleInput = -y;
+        
+        int maxReverseDelta = (ESC_NEUTRAL - ESC_REVERSE_MIN) * speedScale;
+        int delta = map(throttleInput, 0, JOYSTICK_MAX, 0, maxReverseDelta);
+        
+        int finalReverseESC = ESC_NEUTRAL - delta;
 
-        int throttleInput = max(
-            -y,
-            abs(x)
-        );
+        // Bắt đầu chu trình nhấp nhả lùi (KHÔNG sử dụng hàm delay)
+        if(reverseState == 0) {
+            reverseState = 1;         // Bước 1: Bắt đầu bóp phanh
+            reverseTimer = millis();  // Bắt đầu bấm giờ
+        }
 
-        throttleInput = constrain(
-            throttleInput,
-            0,
-            JOYSTICK_MAX
-        );
+        if(reverseState == 1) {
+            targetESC = ESC_MIN; // Gửi tín hiệu lùi sâu nhất để mạch ESC hiểu đây là phanh
+            if(millis() - reverseTimer > 200) { 
+                reverseState = 2; // Qua 200ms -> Chuyển sang bước nhả N
+                reverseTimer = millis();
+            }
+        }
+        else if(reverseState == 2) {
+            targetESC = ESC_NEUTRAL; // Trả về N giống như thao tác nhả cò bằng tay ròng
+            if(millis() - reverseTimer > 200) { 
+                reverseState = 3; // Qua tiếp 200ms -> Chuyển sang bước Lùi thật sự
+            }
+        }
+        else if(reverseState == 3) {
+            targetESC = finalReverseESC; // Đã qua bước nhấp nhả -> xuất tín hiệu lùi tuỳ biến theo nút bấm
+        }
+    }
+    
+    else { // y == 0
+        // Khắc phục nhiễu báo chập chờn Dabble khi người dùng đè kéo nhưng đôi lúc app tuột data báo y = 0
+        // Chỉ reset trạng thái lùi nếu người dùng thực sự thả ngón tay (y=0) hơn 300ms
+        if(millis() - lastYZeroTime > 300) {
+            reverseState = 0; 
+        }
+    }
 
-        int maxReverseDelta =
-            (ESC_NEUTRAL - ESC_REVERSE_MIN) * speedScale;
-
-        int delta = map(
-            throttleInput,
-            0,
-            JOYSTICK_MAX,
-            0,
-            maxReverseDelta
-        );
-
-        targetESC = ESC_NEUTRAL - delta;
+    // Đánh dấu thời gian có cảm ứng Y gửi tới, để không bị đếm nhầm 300ms
+    if(y != 0) {
+        lastYZeroTime = millis();
     }
 
     targetESC = constrain(
@@ -324,11 +316,22 @@ void loop() {
         ? ESC_RAMP_UP
         : ESC_RAMP_DOWN;
 
-    currentESC = stepToward(
-        currentESC,
-        targetESC,
-        escRamp
-    );
+    // Trong 400ms lúc đang nhấp nhả (Bóp/Thả), đòi hỏi cắt mượt, nhảy thẳng giá trị để dứt khoát ép ESC nhận tín hiệu
+    if(reverseState == 1 || reverseState == 2) {
+        currentESC = targetESC;
+    }
+    else {
+        // Chỉ làm mượt khi Tiến hoặc lúc Lùi thật sự (reverseState = 0 hoặc 3)
+        if(targetESC == ESC_NEUTRAL) {
+            escRamp = ESC_RAMP_DOWN * 3; // Trả về 1500 nhanh dần nhưng không cắt đột ngột
+        }
+
+        currentESC = stepToward(
+            currentESC,
+            targetESC,
+            escRamp
+        );
+    }
 
     currentESC = constrain(
         currentESC,
