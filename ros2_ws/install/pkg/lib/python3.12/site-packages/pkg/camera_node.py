@@ -4,7 +4,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 from rclpy.qos import qos_profile_sensor_data
 
-import cv2d
+import cv2
 
 
 class CameraNode(Node):

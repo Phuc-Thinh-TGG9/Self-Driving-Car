@@ -1,0 +1,103 @@
+[0.000000] (-) TimerEvent: {}
+[0.000529] (pkg) JobQueued: {'identifier': 'pkg', 'dependencies': OrderedDict()}
+[0.001018] (pkg) JobStarted: {'identifier': 'pkg'}
+[0.099535] (-) TimerEvent: {}
+[0.200048] (-) TimerEvent: {}
+[0.301332] (-) TimerEvent: {}
+[0.403061] (-) TimerEvent: {}
+[0.503596] (-) TimerEvent: {}
+[0.604234] (-) TimerEvent: {}
+[0.704828] (-) TimerEvent: {}
+[0.805270] (-) TimerEvent: {}
+[0.905735] (-) TimerEvent: {}
+[1.006154] (-) TimerEvent: {}
+[1.109992] (-) TimerEvent: {}
+[1.210486] (-) TimerEvent: {}
+[1.311017] (-) TimerEvent: {}
+[1.438368] (-) TimerEvent: {}
+[1.539168] (-) TimerEvent: {}
+[1.639997] (-) TimerEvent: {}
+[1.742152] (-) TimerEvent: {}
+[1.842616] (-) TimerEvent: {}
+[1.943274] (-) TimerEvent: {}
+[2.044430] (-) TimerEvent: {}
+[2.145358] (-) TimerEvent: {}
+[2.245926] (-) TimerEvent: {}
+[2.346479] (-) TimerEvent: {}
+[2.447302] (-) TimerEvent: {}
+[2.547712] (-) TimerEvent: {}
+[2.649505] (-) TimerEvent: {}
+[2.750634] (-) TimerEvent: {}
+[2.848076] (pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--uninstall', '--editable', '--build-directory', '/home/pi/drone/ros2_ws/build/pkg/build'], 'cwd': '/home/pi/drone/ros2_ws/build/pkg', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/pi', 'USER': 'pi', 'ANTIGRAVITY_SOURCE_METADATA': '{"tool":{"conversationId":"1a50116f-7d3d-4c53-83d2-35b647dcdfa0","stepIndex":57,"toolCall":{"id":"554mpq1q","name":"run_command","argumentsJson":"{\\"CommandLine\\":\\"colcon build --packages-select pkg\\",\\"Cwd\\":\\"/home/pi/drone/ros2_ws\\",\\"WaitMsBeforeAsync\\":500,\\"toolAction\\":\\"Building ROS2 package\\",\\"toolSummary\\":\\"Build pkg using colcon\\"}","thinkingSignature":"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","originalName":"run_command"}}}', 'VSCODE_NLS_CONFIG': '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/opt/antigravity/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/pi', 'CHROME_DESKTOP': 'antigravity-ide.desktop', 'DESKTOP_SESSION': 'ubuntu', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-057f600c-1.10-main.sock', 'GIO_LAUNCHED_DESKTOP_FILE': '/home/pi/.local/share/applications/antigravity.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'PAGER': 'cat', 'MANAGERPID': '1648', 'SYSTEMD_EXEC_PID': '1827', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ANTIGRAVITY_AGENT': '1', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2590', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pi', '_': '/usr/bin/colcon', 'JOURNAL_STREAM': '8:14257', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pi', 'TERM': 'dumb', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'ANTIGRAVITY_EDITOR_APP_ROOT': '/opt/antigravity/resources/app', 'PATH': '/home/pi/.gemini/antigravity-ide/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/car:@/tmp/.ICE-unix/1802,unix/car:/tmp/.ICE-unix/1802', 'INVOCATION_ID': '635ddf8638324d95b9aee0bbb84a576f', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.29DPP3', 'LS_COLORS': '', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ANTIGRAVITY_LS_ADDRESS': 'localhost:43439', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'ANTIGRAVITY_TRAJECTORY_ID': '82edfd8b-da09-4b42-a07d-00aef89ed7ab', 'PWD': '/home/pi/drone/ros2_ws/build/pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'VSCODE_CODE_CACHE_PATH': '/home/pi/.config/Antigravity IDE/CachedData/bf9a033f33934fb4496d7eebed52486272437c3a', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pi/drone/ros2_ws/build/pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'ANTIGRAVITY_CSRF_TOKEN': '36bed193-e868-435c-bba1-797760ee873c', 'VSCODE_PID': '2590'}, 'shell': False}
+[2.850954] (-) TimerEvent: {}
+[2.951453] (-) TimerEvent: {}
+[3.052450] (-) TimerEvent: {}
+[3.153021] (-) TimerEvent: {}
+[3.253387] (-) TimerEvent: {}
+[3.353867] (-) TimerEvent: {}
+[3.454337] (-) TimerEvent: {}
+[3.465336] (pkg) StdoutLine: {'line': b'running develop\n'}
+[3.554477] (-) TimerEvent: {}
+[3.654927] (-) TimerEvent: {}
+[3.755272] (-) TimerEvent: {}
+[3.791428] (pkg) StdoutLine: {'line': b'Removing /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg.egg-link (link to .)\n'}
+[3.855516] (-) TimerEvent: {}
+[3.956335] (-) TimerEvent: {}
+[3.970940] (pkg) CommandEnded: {'returncode': 0}
+[3.975195] (pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/pkg', 'build', '--build-base', '/home/pi/drone/ros2_ws/build/pkg/build', 'install', '--record', '/home/pi/drone/ros2_ws/build/pkg/install.log', '--single-version-externally-managed', 'install_data', '--force'], 'cwd': '/home/pi/drone/ros2_ws/src/pkg', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/pi', 'USER': 'pi', 'ANTIGRAVITY_SOURCE_METADATA': '{"tool":{"conversationId":"1a50116f-7d3d-4c53-83d2-35b647dcdfa0","stepIndex":57,"toolCall":{"id":"554mpq1q","name":"run_command","argumentsJson":"{\\"CommandLine\\":\\"colcon build --packages-select pkg\\",\\"Cwd\\":\\"/home/pi/drone/ros2_ws\\",\\"WaitMsBeforeAsync\\":500,\\"toolAction\\":\\"Building ROS2 package\\",\\"toolSummary\\":\\"Build pkg using colcon\\"}","thinkingSignature":"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","originalName":"run_command"}}}', 'VSCODE_NLS_CONFIG': '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/opt/antigravity/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/pi', 'CHROME_DESKTOP': 'antigravity-ide.desktop', 'DESKTOP_SESSION': 'ubuntu', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-057f600c-1.10-main.sock', 'GIO_LAUNCHED_DESKTOP_FILE': '/home/pi/.local/share/applications/antigravity.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'PAGER': 'cat', 'MANAGERPID': '1648', 'SYSTEMD_EXEC_PID': '1827', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ANTIGRAVITY_AGENT': '1', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2590', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pi', '_': '/usr/bin/colcon', 'JOURNAL_STREAM': '8:14257', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pi', 'TERM': 'dumb', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'ANTIGRAVITY_EDITOR_APP_ROOT': '/opt/antigravity/resources/app', 'PATH': '/home/pi/.gemini/antigravity-ide/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/car:@/tmp/.ICE-unix/1802,unix/car:/tmp/.ICE-unix/1802', 'INVOCATION_ID': '635ddf8638324d95b9aee0bbb84a576f', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.29DPP3', 'LS_COLORS': '', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ANTIGRAVITY_LS_ADDRESS': 'localhost:43439', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'ANTIGRAVITY_TRAJECTORY_ID': '82edfd8b-da09-4b42-a07d-00aef89ed7ab', 'PWD': '/home/pi/drone/ros2_ws/build/pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'VSCODE_CODE_CACHE_PATH': '/home/pi/.config/Antigravity IDE/CachedData/bf9a033f33934fb4496d7eebed52486272437c3a', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pi/drone/ros2_ws/build/pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'ANTIGRAVITY_CSRF_TOKEN': '36bed193-e868-435c-bba1-797760ee873c', 'VSCODE_PID': '2590'}, 'shell': False}
+[4.056443] (-) TimerEvent: {}
+[4.157728] (-) TimerEvent: {}
+[4.258339] (-) TimerEvent: {}
+[4.359013] (-) TimerEvent: {}
+[4.459565] (-) TimerEvent: {}
+[4.560132] (-) TimerEvent: {}
+[4.642028] (pkg) StdoutLine: {'line': b'running egg_info\n'}
+[4.661038] (-) TimerEvent: {}
+[4.682406] (pkg) StdoutLine: {'line': b'writing ../../build/pkg/pkg.egg-info/PKG-INFO\n'}
+[4.686894] (pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/pkg/pkg.egg-info/dependency_links.txt\n'}
+[4.687356] (pkg) StdoutLine: {'line': b'writing entry points to ../../build/pkg/pkg.egg-info/entry_points.txt\n'}
+[4.693165] (pkg) StdoutLine: {'line': b'writing requirements to ../../build/pkg/pkg.egg-info/requires.txt\n'}
+[4.693553] (pkg) StdoutLine: {'line': b'writing top-level names to ../../build/pkg/pkg.egg-info/top_level.txt\n'}
+[4.763590] (-) TimerEvent: {}
+[4.799345] (pkg) StdoutLine: {'line': b"reading manifest file '../../build/pkg/pkg.egg-info/SOURCES.txt'\n"}
+[4.799813] (pkg) StdoutLine: {'line': b"writing manifest file '../../build/pkg/pkg.egg-info/SOURCES.txt'\n"}
+[4.800025] (pkg) StdoutLine: {'line': b'running build\n'}
+[4.800176] (pkg) StdoutLine: {'line': b'running build_py\n'}
+[4.800352] (pkg) StdoutLine: {'line': b'creating /home/pi/drone/ros2_ws/build/pkg/build\n'}
+[4.800510] (pkg) StdoutLine: {'line': b'creating /home/pi/drone/ros2_ws/build/pkg/build/lib\n'}
+[4.800633] (pkg) StdoutLine: {'line': b'creating /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg\n'}
+[4.806359] (pkg) StdoutLine: {'line': b'copying pkg/camera_node.py -> /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg\n'}
+[4.806674] (pkg) StdoutLine: {'line': b'copying pkg/esp32_node.py -> /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg\n'}
+[4.806855] (pkg) StdoutLine: {'line': b'copying pkg/img_processing.py -> /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg\n'}
+[4.806981] (pkg) StdoutLine: {'line': b'copying pkg/__init__.py -> /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg\n'}
+[4.807074] (pkg) StdoutLine: {'line': b'running install\n'}
+[4.815689] (pkg) StdoutLine: {'line': b'running install_lib\n'}
+[4.849015] (pkg) StdoutLine: {'line': b'creating /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg\n'}
+[4.850861] (pkg) StdoutLine: {'line': b'copying /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg/camera_node.py -> /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg\n'}
+[4.851073] (pkg) StdoutLine: {'line': b'copying /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg/esp32_node.py -> /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg\n'}
+[4.851208] (pkg) StdoutLine: {'line': b'copying /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg/img_processing.py -> /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg\n'}
+[4.851327] (pkg) StdoutLine: {'line': b'copying /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg/__init__.py -> /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg\n'}
+[4.859665] (pkg) StdoutLine: {'line': b'byte-compiling /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg/camera_node.py to camera_node.cpython-312.pyc\n'}
+[4.860072] (pkg) StdoutLine: {'line': b'byte-compiling /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg/esp32_node.py to esp32_node.cpython-312.pyc\n'}
+[4.860229] (pkg) StdoutLine: {'line': b'byte-compiling /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg/img_processing.py to img_processing.cpython-312.pyc\n'}
+[4.860349] (pkg) StdoutLine: {'line': b'byte-compiling /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg/__init__.py to __init__.cpython-312.pyc\n'}
+[4.860526] (pkg) StdoutLine: {'line': b'running install_data\n'}
+[4.860656] (pkg) StdoutLine: {'line': b'copying resource/pkg -> /home/pi/drone/ros2_ws/install/pkg/share/ament_index/resource_index/packages\n'}
+[4.860821] (pkg) StdoutLine: {'line': b'copying package.xml -> /home/pi/drone/ros2_ws/install/pkg/share/pkg\n'}
+[4.860960] (pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.868936] (-) TimerEvent: {}
+[4.908143] (pkg) StdoutLine: {'line': b'Copying ../../build/pkg/pkg.egg-info to /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg-0.0.0-py3.12.egg-info\n'}
+[4.913145] (pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[4.969846] (-) TimerEvent: {}
+[5.074893] (-) TimerEvent: {}
+[5.179194] (-) TimerEvent: {}
+[5.279686] (-) TimerEvent: {}
+[5.381719] (pkg) StdoutLine: {'line': b'Installing camera_node script to /home/pi/drone/ros2_ws/install/pkg/lib/pkg\n'}
+[5.382282] (-) TimerEvent: {}
+[5.382528] (pkg) StdoutLine: {'line': b'Installing esp32_node script to /home/pi/drone/ros2_ws/install/pkg/lib/pkg\n'}
+[5.382745] (pkg) StdoutLine: {'line': b"writing list of installed files to '/home/pi/drone/ros2_ws/build/pkg/install.log'\n"}
+[5.482490] (-) TimerEvent: {}
+[5.574901] (pkg) CommandEnded: {'returncode': 0}
+[5.582579] (-) TimerEvent: {}
+[5.635193] (pkg) JobEnded: {'identifier': 'pkg', 'rc': 0}
+[5.639469] (-) EventReactorShutdown: {}

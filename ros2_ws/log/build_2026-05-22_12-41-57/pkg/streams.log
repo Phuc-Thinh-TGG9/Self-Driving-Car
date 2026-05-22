@@ -1,0 +1,26 @@
+[1.574s] Invoking command in '/home/pi/drone/ros2_ws/src/pkg': PYTHONPATH=/home/pi/drone/ros2_ws/build/pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pkg build --build-base /home/pi/drone/ros2_ws/build/pkg/build install --record /home/pi/drone/ros2_ws/build/pkg/install.log --single-version-externally-managed install_data
+[1.976s] running egg_info
+[1.998s] writing ../../build/pkg/pkg.egg-info/PKG-INFO
+[1.999s] writing dependency_links to ../../build/pkg/pkg.egg-info/dependency_links.txt
+[2.003s] writing entry points to ../../build/pkg/pkg.egg-info/entry_points.txt
+[2.004s] writing requirements to ../../build/pkg/pkg.egg-info/requires.txt
+[2.005s] writing top-level names to ../../build/pkg/pkg.egg-info/top_level.txt
+[2.065s] reading manifest file '../../build/pkg/pkg.egg-info/SOURCES.txt'
+[2.066s] writing manifest file '../../build/pkg/pkg.egg-info/SOURCES.txt'
+[2.067s] running build
+[2.067s] running build_py
+[2.067s] copying pkg/keyboard_control_node.py -> /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg
+[2.068s] running install
+[2.079s] running install_lib
+[2.103s] copying /home/pi/drone/ros2_ws/build/pkg/build/lib/pkg/keyboard_control_node.py -> /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg
+[2.104s] byte-compiling /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg/keyboard_control_node.py to keyboard_control_node.cpython-312.pyc
+[2.106s] running install_data
+[2.107s] running install_egg_info
+[2.133s] removing '/home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[2.133s] Copying ../../build/pkg/pkg.egg-info to /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg-0.0.0-py3.12.egg-info
+[2.135s] running install_scripts
+[2.345s] Installing camera_node script to /home/pi/drone/ros2_ws/install/pkg/lib/pkg
+[2.345s] Installing esp32_node script to /home/pi/drone/ros2_ws/install/pkg/lib/pkg
+[2.347s] Installing keyboard_control_node script to /home/pi/drone/ros2_ws/install/pkg/lib/pkg
+[2.347s] writing list of installed files to '/home/pi/drone/ros2_ws/build/pkg/install.log'
+[2.469s] Invoked command in '/home/pi/drone/ros2_ws/src/pkg' returned '0': PYTHONPATH=/home/pi/drone/ros2_ws/build/pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pkg build --build-base /home/pi/drone/ros2_ws/build/pkg/build install --record /home/pi/drone/ros2_ws/build/pkg/install.log --single-version-externally-managed install_data

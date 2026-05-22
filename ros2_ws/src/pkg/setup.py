@@ -24,7 +24,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'camera_node=pkg.camera_node:main'
+            'camera_node=pkg.camera_node:main',
+            'esp32_node=pkg.esp32_node:main',
+            'keyboard_control_node=pkg.keyboard_control_node:main'
         ],
     },
 )
