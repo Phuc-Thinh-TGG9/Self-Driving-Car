@@ -1,0 +1,2 @@
+[console_scripts]
+camera_node = pkg.camera_node:main

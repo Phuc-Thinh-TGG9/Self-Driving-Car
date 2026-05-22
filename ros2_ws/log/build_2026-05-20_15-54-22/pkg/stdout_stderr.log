@@ -1,0 +1,13 @@
+running develop
+running egg_info
+writing pkg.egg-info/PKG-INFO
+writing dependency_links to pkg.egg-info/dependency_links.txt
+writing requirements to pkg.egg-info/requires.txt
+writing top-level names to pkg.egg-info/top_level.txt
+reading manifest file 'pkg.egg-info/SOURCES.txt'
+writing manifest file 'pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg.egg-link (link to .)
+
+Installed /home/pi/drone/ros2_ws/build/pkg
+running symlink_data

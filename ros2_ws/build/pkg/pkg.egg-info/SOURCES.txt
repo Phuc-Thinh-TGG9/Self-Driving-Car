@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+pkg/__init__.py
+pkg/camera_node.py
+pkg/img_processing.py
+pkg.egg-info/PKG-INFO
+pkg.egg-info/SOURCES.txt
+pkg.egg-info/dependency_links.txt
+pkg.egg-info/entry_points.txt
+pkg.egg-info/requires.txt
+pkg.egg-info/top_level.txt
+pkg.egg-info/zip-safe
+resource/pkg

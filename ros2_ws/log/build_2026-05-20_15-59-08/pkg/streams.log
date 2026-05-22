@@ -1,0 +1,24 @@
+[2.533s] Invoking command in '/home/pi/drone/ros2_ws/build/pkg': PYTHONPATH=/home/pi/drone/ros2_ws/build/pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pi/drone/ros2_ws/build/pkg/build --no-deps symlink_data
+[3.287s] running develop
+[3.713s] running egg_info
+[3.713s] creating pkg.egg-info
+[3.769s] writing pkg.egg-info/PKG-INFO
+[3.769s] writing dependency_links to pkg.egg-info/dependency_links.txt
+[3.769s] writing entry points to pkg.egg-info/entry_points.txt
+[3.770s] writing requirements to pkg.egg-info/requires.txt
+[3.770s] writing top-level names to pkg.egg-info/top_level.txt
+[3.770s] writing manifest file 'pkg.egg-info/SOURCES.txt'
+[3.855s] reading manifest file 'pkg.egg-info/SOURCES.txt'
+[3.860s] writing manifest file 'pkg.egg-info/SOURCES.txt'
+[3.895s] running build_ext
+[3.895s] Creating /home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages/pkg.egg-link (link to .)
+[3.896s] Installing camera_node script to /home/pi/drone/ros2_ws/install/pkg/lib/pkg
+[3.897s] 
+[3.897s] Installed /home/pi/drone/ros2_ws/build/pkg
+[3.897s] running symlink_data
+[3.899s] creating /home/pi/drone/ros2_ws/install/pkg/share/ament_index
+[3.899s] creating /home/pi/drone/ros2_ws/install/pkg/share/ament_index/resource_index
+[3.899s] creating /home/pi/drone/ros2_ws/install/pkg/share/ament_index/resource_index/packages
+[3.900s] symbolically linking /home/pi/drone/ros2_ws/build/pkg/resource/pkg -> /home/pi/drone/ros2_ws/install/pkg/share/ament_index/resource_index/packages
+[3.901s] symbolically linking /home/pi/drone/ros2_ws/build/pkg/package.xml -> /home/pi/drone/ros2_ws/install/pkg/share/pkg
+[4.080s] Invoked command in '/home/pi/drone/ros2_ws/build/pkg' returned '0': PYTHONPATH=/home/pi/drone/ros2_ws/build/pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/drone/ros2_ws/install/pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pi/drone/ros2_ws/build/pkg/build --no-deps symlink_data
