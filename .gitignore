@@ -1,0 +1,23 @@
+# ROS 2 workspaces
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Videos
+*.avi
+*.mp4
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

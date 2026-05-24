@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
+from std_msgs.msg import Bool
 import sys
 import select
 import termios
@@ -17,6 +18,7 @@ Mũi tên Xuống : Lùi lại
 Mũi tên Trái  : Đánh lái trái
 Mũi tên Phải  : Đánh lái phải
 Phím 'Space'  : Phanh khẩn cấp / Dừng lại
+Phím 'v'      : Bật/Tắt quay video
 Bấm 'CTRL-C' để thoát
 """
 
@@ -38,8 +40,10 @@ class KeyboardControlNode(Node):
     def __init__(self):
         super().__init__('keyboard_control_node')
         self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.record_pub_ = self.create_publisher(Bool, '/record_video', 10)
+        self.is_recording = False
         
-        self.speed = 0.5  # Tốc độ tiến/lùi mặc định
+        self.speed = 0.3  # Tốc độ tiến/lùi mặc định (giảm xuống 0.2 để xe không bị vọt)
         self.turn = 0.5   # Góc đánh lái mặc định
         
         self.linear_x = 0.0
@@ -65,10 +69,19 @@ class KeyboardControlNode(Node):
                     self.angular_z = self.turn
                 elif key == '\x1b[C': # Mũi tên Phải
                     self.linear_x = self.speed
-                    self.angular_z = -self.turn
+                    self.angular_z =-self.turn
                 elif key == ' ': # Phím Space (Dừng)
                     self.linear_x = 0.0
                     self.angular_z = 0.0
+                elif key == 'v': # Bật/Tắt quay video
+                    self.is_recording = not self.is_recording
+                    record_msg = Bool()
+                    record_msg.data = self.is_recording
+                    self.record_pub_.publish(record_msg)
+                    if self.is_recording:
+                        print("\r\n[BẮT ĐẦU QUAY VIDEO]")
+                    else:
+                        print("\r\n[ĐÃ DỪNG QUAY VIDEO]")
                 elif key == '\x03': # Ctrl+C
                     break
                 else:
