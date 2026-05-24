@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ROS 2 workspaces
 ros2_ws/build/
 ros2_ws/install/
@@ -21,3 +22,10 @@ __pycache__/
 .Trashes
 ehthumbs.db
 Thumbs.db
+=======
+.pio
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch
+>>>>>>> 993a315dbe7c39a404b9d1bef589acddcb3c771d
